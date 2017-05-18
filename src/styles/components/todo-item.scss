@@ -9,6 +9,8 @@
   float: left;
   width: 80%;
 }
-.btn-success {
-  margin-right:3px;
+.list-group-item {
+  .btn:not(:last-child) {
+    margin-right:3px;
+  }
 }

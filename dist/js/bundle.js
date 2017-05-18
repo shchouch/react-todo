@@ -24568,8 +24568,8 @@
 	      });
 	    }
 	  }, {
-	    key: 'handleDoubleClick',
-	    value: function handleDoubleClick(e) {
+	    key: 'editNode',
+	    value: function editNode(e) {
 	      if (!this.state.showInput) {
 	        this.setState({
 	          showInput: true
@@ -24604,12 +24604,10 @@
 
 	      return _react2.default.createElement(
 	        'li',
-	        { className: classes, onDoubleClick: function onDoubleClick(e) {
-	            return _this2.handleDoubleClick(e);
-	          } },
+	        { className: classes },
 	        this.state.showInput ? _react2.default.createElement(
 	          'form',
-	          { onSubmit: function onSubmit(e) {
+	          { className: 'clearfix', onSubmit: function onSubmit(e) {
 	              return _this2.doSubmit(e);
 	            } },
 	          _react2.default.createElement('input', { type: 'text', id: 'edit', ref: 'input', value: this.state.value, onChange: function onChange(e) {
@@ -24640,6 +24638,13 @@
 	                  return _this2.removeNode(e);
 	                } },
 	              '\u2715'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'button', className: 'btn btn-xs btn-default img-circle', onClick: function onClick(e) {
+	                  return _this2.editNode(e);
+	                } },
+	              'Edit'
 	            )
 	          )
 	        )

@@ -26,7 +26,7 @@ export default class TodoItem extends React.Component {
     })
   };
 
-  handleDoubleClick(e) {
+  editNode(e) {
     if ( !this.state.showInput ) {
       this.setState({
         showInput: true
@@ -54,12 +54,11 @@ export default class TodoItem extends React.Component {
     if ( this.props.hide === true ) {
       classes = classes + ' list-group-item-hide';
     }
-
-
+    
     return (
-      <li className={classes} onDoubleClick={(e) => this.handleDoubleClick(e)}>
+      <li className={classes}>
         { this.state.showInput ? (
-            <form onSubmit={(e) => this.doSubmit(e)}>
+            <form className="clearfix" onSubmit={(e) => this.doSubmit(e)}>
               <input type="text" id="edit" ref="input" value={this.state.value} onChange={(e) => this.changeHandle(e)} className="form-control form-edit" placeholder="What do you need to do?" />
               <input type="submit" value="Save Item" className="btn btn-primary pull-right" />
             </form>
@@ -69,6 +68,7 @@ export default class TodoItem extends React.Component {
             <div className="pull-right" role="group">
               <button type="button" className="btn btn-xs btn-success img-circle" onClick={(e) => this.toggleComplete(e)}>&#x2713;</button>
               <button type="button" className="btn btn-xs btn-danger img-circle" onClick={(e) => this.removeNode(e)}>&#x2715;</button>
+              <button type="button" className="btn btn-xs btn-default img-circle" onClick={(e) => this.editNode(e)}>Edit</button>
             </div>
           </div>
           )

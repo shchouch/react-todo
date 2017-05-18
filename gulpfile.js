@@ -14,7 +14,6 @@ var csscomb = require('gulp-csscomb');
 
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-notify = require("gulp-notify");
 
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');

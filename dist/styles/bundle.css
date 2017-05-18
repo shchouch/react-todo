@@ -6478,7 +6478,7 @@ button.close {
   width: 80%;
 }
 
-.btn-success {
+.list-group-item .btn:not(:last-child) {
   margin-right: 3px;
 }
 

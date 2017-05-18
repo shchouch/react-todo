@@ -1,0 +1,14 @@
+@import 'reset.scss';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&subset=latin-ext);
+
+* {
+  box-sizing: border-box;
+}
+
+
+@import './components/todo';
+@import './components/todo-form';
+@import './components/todo-item';
+@import './components/langBtn';

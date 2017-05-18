@@ -65,7 +65,7 @@ export default class TodoItem extends React.Component {
             </form>
           ) : (
           <div>
-            <span >{this.props.task}</span>
+            <span className="task-text">{this.props.task}</span>
             <div className="pull-right" role="group">
               <button type="button" className="btn btn-xs btn-success" onClick={(e) => this.toggleComplete(e)}>&#x2713;</button>
               <button type="button" className="btn btn-xs btn-danger" onClick={(e) => this.removeNode(e)}>&#x2715;</button>

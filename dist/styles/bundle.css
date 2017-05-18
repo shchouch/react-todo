@@ -6482,6 +6482,12 @@ button.close {
   margin-right: 3px;
 }
 
+.task-text {
+  max-width: 80%;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
 .dropdown {
   position: absolute;
   top: 10px;

@@ -22,7 +22,7 @@ export default class TodoForm extends React.Component {
     });
   };
 
-  changeHandle(e) {
+  handleChange(e) {
     this.setState({
       value: e.target.value
     })
@@ -49,7 +49,7 @@ export default class TodoForm extends React.Component {
             <div className="form-group clearfix">
               <label htmlFor="task" className="col-md-2 control-label">{this.props.strings.label}</label>
               <div className="col-md-10">
-                <input type="text" id="task" ref="input" value={this.state.value} onChange={(e) => this.changeHandle(e)} className="form-control" placeholder={this.props.strings.placeholder} />
+                <input type="text" id="task" ref="input" value={this.state.value} onChange={(e) => this.handleChange(e)} className="form-control" placeholder={this.props.strings.placeholder} />
               </div>
             </div>
             <div className="row">

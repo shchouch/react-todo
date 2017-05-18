@@ -24620,7 +24620,7 @@
 	          null,
 	          _react2.default.createElement(
 	            'span',
-	            null,
+	            { className: 'task-text' },
 	            this.props.task
 	          ),
 	          _react2.default.createElement(
@@ -24711,8 +24711,8 @@
 	      });
 	    }
 	  }, {
-	    key: 'changeHandle',
-	    value: function changeHandle(e) {
+	    key: 'handleChange',
+	    value: function handleChange(e) {
 	      this.setState({
 	        value: e.target.value
 	      });
@@ -24761,7 +24761,7 @@
 	                'div',
 	                { className: 'col-md-10' },
 	                _react2.default.createElement('input', { type: 'text', id: 'task', ref: 'input', value: this.state.value, onChange: function onChange(e) {
-	                    return _this2.changeHandle(e);
+	                    return _this2.handleChange(e);
 	                  }, className: 'form-control', placeholder: this.props.strings.placeholder })
 	              )
 	            ),

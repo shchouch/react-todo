@@ -6487,11 +6487,8 @@ button.close {
   top: 10px;
   right: 20px;
 }
-.dropdown .dropdown-menu {
+.dropdown-menu {
   right: 0;
   left: auto;
-}
-
-.dropdown-menu {
   min-width: 100%;
 }

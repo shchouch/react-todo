@@ -27,6 +27,7 @@ export default class TodoItem extends React.Component {
   };
 
   editNode(e) {
+    e.preventDefault();
     if ( !this.state.showInput ) {
       this.setState({
         showInput: true
@@ -36,7 +37,7 @@ export default class TodoItem extends React.Component {
 
   doSubmit (e) {
     e.preventDefault();
-    var task = this.state.value.trim();
+    const task = this.state.value.trim();
     if (!task) {
       return;
     }
@@ -66,9 +67,9 @@ export default class TodoItem extends React.Component {
           <div>
             <span >{this.props.task}</span>
             <div className="pull-right" role="group">
-              <button type="button" className="btn btn-xs btn-success img-circle" onClick={(e) => this.toggleComplete(e)}>&#x2713;</button>
-              <button type="button" className="btn btn-xs btn-danger img-circle" onClick={(e) => this.removeNode(e)}>&#x2715;</button>
-              <button type="button" className="btn btn-xs btn-default img-circle" onClick={(e) => this.editNode(e)}>Edit</button>
+              <button type="button" className="btn btn-xs btn-success" onClick={(e) => this.toggleComplete(e)}>&#x2713;</button>
+              <button type="button" className="btn btn-xs btn-danger" onClick={(e) => this.removeNode(e)}>&#x2715;</button>
+              <button type="button" className="btn btn-xs btn-default" onClick={(e) => this.editNode(e)}>Edit</button>
             </div>
           </div>
           )

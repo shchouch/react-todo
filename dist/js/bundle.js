@@ -24570,6 +24570,7 @@
 	  }, {
 	    key: 'editNode',
 	    value: function editNode(e) {
+	      e.preventDefault();
 	      if (!this.state.showInput) {
 	        this.setState({
 	          showInput: true
@@ -24627,21 +24628,21 @@
 	            { className: 'pull-right', role: 'group' },
 	            _react2.default.createElement(
 	              'button',
-	              { type: 'button', className: 'btn btn-xs btn-success img-circle', onClick: function onClick(e) {
+	              { type: 'button', className: 'btn btn-xs btn-success', onClick: function onClick(e) {
 	                  return _this2.toggleComplete(e);
 	                } },
 	              '\u2713'
 	            ),
 	            _react2.default.createElement(
 	              'button',
-	              { type: 'button', className: 'btn btn-xs btn-danger img-circle', onClick: function onClick(e) {
+	              { type: 'button', className: 'btn btn-xs btn-danger', onClick: function onClick(e) {
 	                  return _this2.removeNode(e);
 	                } },
 	              '\u2715'
 	            ),
 	            _react2.default.createElement(
 	              'button',
-	              { type: 'button', className: 'btn btn-xs btn-default img-circle', onClick: function onClick(e) {
+	              { type: 'button', className: 'btn btn-xs btn-default', onClick: function onClick(e) {
 	                  return _this2.editNode(e);
 	                } },
 	              'Edit'
